@@ -86,7 +86,7 @@ class FlxAnimateAssets
 		// Fallback to filesystem
 		#if sys
 		if (sys.FileSystem.exists(path))
-			return BitmapData.fromFile(path);
+			return BitmapData.fromBytes(sys.io.File.getBytes(path));
 		#end
 
 		return null;
